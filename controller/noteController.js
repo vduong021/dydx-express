@@ -58,7 +58,9 @@ const noteController = {
 
   //delete note from DB
   async deleteNote(req, res, next) {
+    
     const id = req.params.id;
+    console.log('this is id', id)
     try {
       const data = await Instance.findOneAndDelete({ _id: id });
       res.locals.delete = data;
