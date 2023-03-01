@@ -1,14 +1,14 @@
 const express = require('express');
-
+const cors = require('cors');
 const router = require('./api/route');
 
 const app = express();
-const PORT = 5555;
+const PORT = 5556;
 
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cors());
 
 app.use('/api', router);
 
