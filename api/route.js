@@ -10,7 +10,7 @@ router.post('/', noteController.createNote, (req, res) => res.status(200).json(r
 
 router.put('/:id', noteController.editNote, (req, res) => res.status(200).json(res.locals.edit));
 
-router.delete('/:id', noteController.deleteNote, (req, res) => res.status(200));
+router.delete('/:id', noteController.deleteNote, (req, res) => res.status(200).json(res.locals.delete));
 
 
 module.exports = router
